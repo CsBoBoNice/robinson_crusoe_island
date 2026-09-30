@@ -1,0 +1,9 @@
+# ffmpeg 二进制（体积过大，按需自行放置，不入库）
+ffmpeg/*.exe
+ffmpeg/*.dll
+
+# 系统/编辑器
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.log
