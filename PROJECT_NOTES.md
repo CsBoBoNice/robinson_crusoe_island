@@ -27,7 +27,11 @@ Robinson_Crusoe_prj/
 ├─ code/data/weather/
 │  └─ weather-script.js      # 【已产出】天气触发数据（window.RC.data.weather）
 ├─ script/                   # 【第②步已产出】chapter-03.md … chapter-18.md（16 个）
-├─ prompts/                    # 尚未创建（下一步）
+├─ prompts/                  # 【第③步已产出】
+│  ├─ prompt-spec.md         # 提示词规范/模板
+│  ├─ chapter-03/ … chapter-18/
+│  │  ├─ chXX-s###.md        # 每镜一个文件（共 199 镜）
+│  │  └─ _index.md           # 每章镜次索引
 ```
 
 > 剧本模板（强制）：标题 + 引用块（章节/范围/时间轴/跨度/地点/人物/概要）+ 逐场景（时间/地点/人物/环境/内容/心理活动/对白旁白/原著要点）+ 章末（事件清单/人物/环境与物产/原著出处/待确认）。
@@ -80,7 +84,7 @@ Robinson_Crusoe_prj/
 - [x] ①物种/物体清单（`docs/`）：`species-list.md`、`closeup-objects.md`、`characters.md`、`island-layout.md`、`timeline-stages.md` —— **已产出并确认**
 - [x] 天气脚本数据 `code/data/weather/weather-script.js`
 - [x] ②剧本（`script/chapter-03.md` … `chapter-18.md`，16 个）—— **已产出，待验收**
-- [ ] ③提示词（`prompts/`）
+- [x] ③提示词（`prompts/`）：`prompt-spec.md` + chapter-03…18，**199 镜 + 15 索引** —— **已产出，待验收**
 - [ ] ④3D 程序（`code/`）
 
 ### 4.3 验收（第一步）
@@ -101,6 +105,15 @@ Robinson_Crusoe_prj/
 - [x] 各章「待确认」已全部按推荐结论回填（`docs/script-decisions.md`，43 项）
 - [ ] K1—K3 三项关键项使用者最终拍板（见 `docs/script-decisions.md` §三）
 
+### 4.3c 验收（第三步·提示词）
+
+- [x] `prompts/prompt-spec.md` 规范建立，含 H3 字段与中文写作纪律
+- [x] 每镜一文件 `chXX-s###.md`，单镜 ≤15 秒、时间轴末点与时长一致
+- [x] 参考标签仅 `<Picture N>`/`<Audio N>`；旁白用独立 `<Audio N>`
+- [x] 实拍真人风格、画面无字幕；暴力/食人用中远景/侧写/遮挡
+- [x] 覆盖第 3—18 章全部剧本场景（199 镜）
+- [ ] 镜数/时长是否需调整（可选：合并或拆分）
+
 ### 4.4 复现命令
 
 ```powershell
@@ -109,5 +122,7 @@ Select-String -LiteralPath "book\鲁滨逊漂流记 (丹尼尔·笛福,Daniel De
 # 查看全部 docs / script
 Get-ChildItem docs
 Get-ChildItem script
+# 统计提示词镜数
+(Get-ChildItem prompts -Recurse -Filter "ch*-s*.md").Count
 ```
 
