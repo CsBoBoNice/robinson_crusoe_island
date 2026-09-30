@@ -25,8 +25,11 @@ Robinson_Crusoe_prj/
 │  └─ timeline-stages.md     # 时间轴 12 阶段 + 月刻度（已确认）
 ├─ code/data/weather/
 │  └─ weather-script.js      # 【已产出】天气触发数据（window.RC.data.weather）
-├─ script/  prompts/           # 尚未创建（后续步骤）
+├─ script/                   # 【第②步已产出】chapter-03.md … chapter-18.md（16 个）
+├─ prompts/                    # 尚未创建（下一步）
 ```
+
+> 剧本模板（强制）：标题 + 引用块（章节/范围/时间轴/跨度/地点/人物/概要）+ 逐场景（时间/地点/人物/环境/内容/心理活动/对白旁白/原著要点）+ 章末（事件清单/人物/环境与物产/原著出处/待确认）。
 
 > 时间轴刻度：**月**（327 个月）；阶段 12 段为次刻度。天气：`code/data/weather/weather-script.js`。
 
@@ -75,7 +78,7 @@ Robinson_Crusoe_prj/
 
 - [x] ①物种/物体清单（`docs/`）：`species-list.md`、`closeup-objects.md`、`characters.md`、`island-layout.md`、`timeline-stages.md` —— **已产出并确认**
 - [x] 天气脚本数据 `code/data/weather/weather-script.js`
-- [ ] ②剧本（`script/`）
+- [x] ②剧本（`script/chapter-03.md` … `chapter-18.md`，16 个）—— **已产出，待验收**
 - [ ] ③提示词（`prompts/`）
 - [ ] ④3D 程序（`code/`）
 
@@ -89,12 +92,20 @@ Robinson_Crusoe_prj/
 - [x] 阶段 9 年份推测回填；天气脚本独立至 `code/data/weather/`
 - [x] 编号规则确认（`P/A/O/B/T/C` + 三字母名码 + 3 位序号）
 
+### 4.3b 验收（第二步·剧本）
+
+- [x] `script/chapter-03.md` … `chapter-18.md` 共 16 个，覆盖登岛末段→第 18 章
+- [ ] 每章结构与模板一致（元信息/场景/心理/环境/事件清单/出处）
+- [ ] 事件与原著一致、无重大遗漏；时间轴/外观阶段/编号与 `docs/` 对齐
+- [ ] 各章「待确认」中的原著歧义（如第 14 章年份、第 15 章年数）已裁决
+
 ### 4.4 复现命令
 
 ```powershell
 # 查看章节行号定位
 Select-String -LiteralPath "book\鲁滨逊漂流记 (丹尼尔·笛福,Daniel Defoe).txt" -Pattern "^第.{1,3}章"
-# 查看全部 docs
+# 查看全部 docs / script
 Get-ChildItem docs
+Get-ChildItem script
 ```
 
