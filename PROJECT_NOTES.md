@@ -22,7 +22,8 @@ Robinson_Crusoe_prj/
 │  ├─ characters.md          # 角色清单 C-* + 鲁滨逊穿着（L3）
 │  ├─ crusoe-appearance.md   # 鲁滨逊分时间轴外观/须发/穿着（观察者法·中文）
 │  ├─ island-layout.md       # 海岛尺寸/地形/地标设计（已确认）
-│  └─ timeline-stages.md     # 时间轴 12 阶段 + 月刻度（已确认）
+│  ├─ timeline-stages.md     # 时间轴 12 阶段 + 月刻度（已确认）
+│  └─ script-decisions.md    # 剧本全部待确认项的推荐结论（已确认）
 ├─ code/data/weather/
 │  └─ weather-script.js      # 【已产出】天气触发数据（window.RC.data.weather）
 ├─ script/                   # 【第②步已产出】chapter-03.md … chapter-18.md（16 个）
@@ -95,9 +96,10 @@ Robinson_Crusoe_prj/
 ### 4.3b 验收（第二步·剧本）
 
 - [x] `script/chapter-03.md` … `chapter-18.md` 共 16 个，覆盖登岛末段→第 18 章
-- [ ] 每章结构与模板一致（元信息/场景/心理/环境/事件清单/出处）
-- [ ] 事件与原著一致、无重大遗漏；时间轴/外观阶段/编号与 `docs/` 对齐
-- [ ] 各章「待确认」中的原著歧义（如第 14 章年份、第 15 章年数）已裁决
+- [x] 每章结构与模板一致（元信息/场景/心理/环境/事件清单/出处）
+- [x] 事件与原著一致、无重大遗漏；时间轴/外观阶段/编号与 `docs/` 对齐
+- [x] 各章「待确认」已全部按推荐结论回填（`docs/script-decisions.md`，43 项）
+- [ ] K1—K3 三项关键项使用者最终拍板（见 `docs/script-decisions.md` §三）
 
 ### 4.4 复现命令
 
