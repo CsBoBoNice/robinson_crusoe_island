@@ -20,6 +20,7 @@ Robinson_Crusoe_prj/
 │  ├─ species-list.md        # 物种/物体清单（含学名）
 │  ├─ closeup-objects.md     # 近景精细物体清单（已列全确认）
 │  ├─ characters.md          # 角色清单 C-* + 鲁滨逊穿着（L3）
+│  ├─ crusoe-appearance.md   # 鲁滨逊分时间轴外观/须发/穿着（观察者法·中文）
 │  ├─ island-layout.md       # 海岛尺寸/地形/地标设计（已确认）
 │  └─ timeline-stages.md     # 时间轴 12 阶段 + 月刻度（已确认）
 ├─ code/data/weather/

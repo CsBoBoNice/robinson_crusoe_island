@@ -65,6 +65,7 @@
 - `docs/island-layout.md`：海岛**尺寸、地形、坐标、地标**设计（依据原著自行设计并文档化）。
 - `docs/timeline-stages.md`：时间轴**关键阶段**划分及每阶段的岛屿状态。
 - `docs/characters.md`：**角色清单**（`C-*`）及角色专属器物；鲁滨逊本人及全套穿着为特写级（L3）。
+- `docs/crusoe-appearance.md`：鲁滨逊**分时间轴外观/穿着/须发**建模说明（按 `bozo-qwen21-prompt` 观察者法，中文）。
 
 ### 3.2 剧本（`script/`）
 
@@ -277,6 +278,7 @@ Robinson_Crusoe_prj/
 | D24 | 阶段 9 年份统一采用推测口径：梦第 26 年 3 月、救星期五第 26 年 4—5 月、救父与西班牙人第 27 年（公历约 1685—1686） |
 | D25 | 编号规则确认：`P/A/O/B/T/C` + 三字母名码 + 3 位序号 |
 | D26 | 物/角色分离：角色 `C-*` 及专属穿戴/器物列入 `docs/characters.md`；鲁滨逊本人及全套穿着为特写级 L3 |
+| D27 | 鲁滨逊外观按时间轴单独描述于 `docs/crusoe-appearance.md`，含须发/穿着，写法依 `bozo-qwen21-prompt` 观察者法，**仅中文** |
 
 ---
 
