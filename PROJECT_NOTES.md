@@ -11,30 +11,87 @@
 
 ### 1.1 目录结构（实际）
 
+```
+Robinson_Crusoe_prj/
+├─ AGENTS.md / REQUIREMENTS.md / PROJECT_NOTES.md
+├─ book/                 # 原著中译本（UTF-8, 1370 行）
+├─ skill/                # 参考 skill
+├─ docs/                 # 【第一步已产出】
+│  ├─ species-list.md        # 物种/物体清单（含学名）
+│  ├─ closeup-objects.md     # 近景精细物体清单（待二次确认）
+│  ├─ island-layout.md       # 海岛尺寸/地形/地标设计（已确认）
+│  └─ timeline-stages.md     # 时间轴 12 阶段 + 月刻度（已确认）
+├─ code/data/weather/
+│  └─ weather-script.js      # 【已产出】天气触发数据（window.RC.data.weather）
+├─ script/  prompts/           # 尚未创建（后续步骤）
+```
+
+> 时间轴刻度：**月**（327 个月）；阶段 12 段为次刻度。天气：`code/data/weather/weather-script.js`。
+
 ### 1.2 数据流（实际执行顺序）
+
+第一步（文档）：`book` → 逐章抽取 → `docs/*.md`。后续：①物种清单 → ②剧本 → ③提示词 → ④3D 程序（逐步验收）。
 
 ### 1.3 关键接口（实际签名）
 
+- 尚未进入代码阶段。编号规则（草案，待确认）：`<类别码>-<名码>` + `-<3 位序号>`，类别码 `P/A/O/B/T/C`。
+
 ### 1.4 环境说明（实际）
+
+- 平台 Windows / PowerShell 5.1；书本文件为 **UTF-8**（PowerShell `Select-String` 控制台显示乱码，用 Read 工具读取正常）。
+- 尚未验证 Three.js / Theatre.js 的离线非 Module 构建（见 REQUIREMENTS 十一·4）。
 
 ---
 
 ## 2. 关键数值
 
+- 原著文件：`book/鲁滨逊漂流记 (丹尼尔·笛福,Daniel Defoe).txt`，1370 行 / 544,862 字节。
+- 章节行号（1-indexed，供后续快速定位）：
+  - 第 3 章 188、第 4 章 262、第 5 章 339、第 6 章 416、第 7 章 496、第 8 章 548、第 9 章 598、第 10 章 669、第 11 章 723、第 12 章 780、第 13 章 831、第 14 章 882、第 15 章 928、第 16 章 1002、第 17 章 1056、第 18 章 1131、第 19 章 1222、第 20 章 1310。
+  - 剧本范围：第 3 章末（约 188 行末段）— 第 18 章末（1221 行）。
+- 关键时间点：登岛 1659-09-30；第 6 年 1665-11-06 独木舟遇急流；第 23 年见野人火光；第 24 年 5-16 西班牙沉船；第 26—27 年救星期五；第 27 年派西班牙人；1686-12-19 离岛。
+- 纬度 9°22′N；距大陆约 40 海里；岛设计尺寸约 24 km(东西) × 13 km(南北)。
+- 时长单位：1 里格 ≈ 3 英里 ≈ 4.83 km。
 
 ## 3. 问题与解决
 
 > 格式：**现象 / 原因 / 解决办法 / 影响范围 / 是否已回改文档**。
 > 仅保留与**当前实现**相关的条目；
 
+- 编号命名冲突：AGENTS.md 代码规范示例为 `plants-oak-01.js`（复数类别+变体两位），REQUIREMENTS 十一·3 举例 `tree-oak-001`。**解决**：先在 `docs/species-list.md` 第 0 节给出草案 `<类别码>-<名码>-<序号>`，待使用者确认后统一；影响：全部模型编号。是否回改文档：暂未（待确认）。
+- 原著「企鹅」出现于加勒比海域不合理。**解决**：`species-list.md` 标注存疑，建议以当地海鸟替代。影响：建模。是否回改文档：已在清单注明。
+
 
 ## 4. Checklist
 
 ### 4.1 环境
 
+- [ ] Windows 双击 `code/index.html` 离线可运行
+- [ ] 无 CDN / 无运行时联网
+
 ### 4.2 开发
 
-### 4.3 验收
+- [x] ①物种/物体清单（`docs/`）：`species-list.md`、`closeup-objects.md`、`island-layout.md`、`timeline-stages.md` —— **已产出**（编号规则待定）
+- [x] 天气脚本数据 `code/data/weather/weather-script.js`
+- [ ] ②剧本（`script/`）
+- [ ] ③提示词（`prompts/`）
+- [ ] ④3D 程序（`code/`）
+
+### 4.3 验收（第一步）
+
+- [x] `docs/species-list.md` 物种/学名/出处/用途完整，且「补充物种」合理
+- [x] `docs/closeup-objects.md` 近景清单（待二次确认是否列全）
+- [x] `docs/island-layout.md` 岛体尺寸/地标确认（24×13 km、40 海里、原点=城堡、远景低精度）
+- [x] `docs/timeline-stages.md` 阶段切分 + **月刻度**确认
+- [x] 阶段 9 年份推测回填；天气脚本独立至 `code/data/weather/`
+- [ ] 编号规则确认（`P/A/O/B/T/C` + 名码 + 3 位序号）
 
 ### 4.4 复现命令
+
+```powershell
+# 查看章节行号定位
+Select-String -LiteralPath "book\鲁滨逊漂流记 (丹尼尔·笛福,Daniel Defoe).txt" -Pattern "^第.{1,3}章"
+# 查看全部 docs
+Get-ChildItem docs
+```
 
