@@ -18,7 +18,8 @@ Robinson_Crusoe_prj/
 ├─ skill/                # 参考 skill
 ├─ docs/                 # 【第一步已产出】
 │  ├─ species-list.md        # 物种/物体清单（含学名）
-│  ├─ closeup-objects.md     # 近景精细物体清单（待二次确认）
+│  ├─ closeup-objects.md     # 近景精细物体清单（已列全确认）
+│  ├─ characters.md          # 角色清单 C-* + 鲁滨逊穿着（L3）
 │  ├─ island-layout.md       # 海岛尺寸/地形/地标设计（已确认）
 │  └─ timeline-stages.md     # 时间轴 12 阶段 + 月刻度（已确认）
 ├─ code/data/weather/
@@ -34,7 +35,7 @@ Robinson_Crusoe_prj/
 
 ### 1.3 关键接口（实际签名）
 
-- 尚未进入代码阶段。编号规则（草案，待确认）：`<类别码>-<名码>` + `-<3 位序号>`，类别码 `P/A/O/B/T/C`。
+- 尚未进入代码阶段。编号规则（**已确认**）：`<类别码>-<三字母名码>` + `-<3 位序号>`，类别码 `P/A/O/B/T/C`。角色及专属器物见 `docs/characters.md`。
 
 ### 1.4 环境说明（实际）
 
@@ -71,7 +72,7 @@ Robinson_Crusoe_prj/
 
 ### 4.2 开发
 
-- [x] ①物种/物体清单（`docs/`）：`species-list.md`、`closeup-objects.md`、`island-layout.md`、`timeline-stages.md` —— **已产出**（编号规则待定）
+- [x] ①物种/物体清单（`docs/`）：`species-list.md`、`closeup-objects.md`、`characters.md`、`island-layout.md`、`timeline-stages.md` —— **已产出并确认**
 - [x] 天气脚本数据 `code/data/weather/weather-script.js`
 - [ ] ②剧本（`script/`）
 - [ ] ③提示词（`prompts/`）
@@ -80,11 +81,12 @@ Robinson_Crusoe_prj/
 ### 4.3 验收（第一步）
 
 - [x] `docs/species-list.md` 物种/学名/出处/用途完整，且「补充物种」合理
-- [x] `docs/closeup-objects.md` 近景清单（待二次确认是否列全）
-- [x] `docs/island-layout.md` 岛体尺寸/地标确认（24×13 km、40 海里、原点=城堡、远景低精度）
+- [x] `docs/closeup-objects.md` 近景清单**已列全确认**
+- [x] `docs/characters.md` 角色清单（C-*）；鲁滨逊及穿着 L3
+- [x] `docs/island-layout.md` 岛体尺寸/地标确认（24×13 km、40 海里、原点=城堡、地标坐标确认、远景低精度）
 - [x] `docs/timeline-stages.md` 阶段切分 + **月刻度**确认
 - [x] 阶段 9 年份推测回填；天气脚本独立至 `code/data/weather/`
-- [ ] 编号规则确认（`P/A/O/B/T/C` + 名码 + 3 位序号）
+- [x] 编号规则确认（`P/A/O/B/T/C` + 三字母名码 + 3 位序号）
 
 ### 4.4 复现命令
 

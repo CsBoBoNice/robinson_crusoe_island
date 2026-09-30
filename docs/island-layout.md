@@ -137,4 +137,4 @@
 1. ✅ 岛体尺寸 24 km × 13 km、距大陆约 40 海里 —— 已确认符合预期。
 2. ✅ 原点取城堡 —— 已确认合适。
 3. ✅ 西侧两小岛、对面大陆 —— 以**低精度远景**呈现（见 §7）。
-4. ⏳ 地标坐标（T-*）确认后写入 `code/data/`，作为 `docs/closeup-objects.md` 中 B/O 坐标锚点。
+4. ✅ 地标坐标（T-*）**已确认**；后续写入 `code/data/`，作为 `docs/closeup-objects.md` 与 `docs/characters.md` 中 B/O 坐标锚点。
